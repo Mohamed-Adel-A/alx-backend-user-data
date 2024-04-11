@@ -100,44 +100,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "0. Regex-ing"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 0\. Regex-ing
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 1\. Log formatter
 
@@ -203,44 +166,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "1. Log formatter"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 1\. Log formatter
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 2\. Create logger
 
@@ -291,44 +217,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "2. Create logger"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 2\. Create logger
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 3\. Connect to secure database
 
@@ -403,44 +292,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "3. Connect to secure database"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 3\. Connect to secure database
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 4\. Read and filter data
 
@@ -513,18 +365,7 @@ bob@dylan:~$
 
 Done?! Get a sandbox QA Review
 
-×
-
-#### 4\. Read and filter data
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 5\. Encrypting passwords
 
@@ -566,44 +407,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "5. Encrypting passwords"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 5\. Encrypting passwords
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 6\. Check valid password
 
