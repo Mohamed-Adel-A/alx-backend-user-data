@@ -5,6 +5,7 @@ Module for filtering sensitive data in log messages.
 
 import re
 import typing
+import logging
 
 
 def filter_datum(fields: typing.List[str], redaction: str,
@@ -16,3 +17,22 @@ def filter_datum(fields: typing.List[str], redaction: str,
         pattern = f'{re.escape(field)}=.+?{re.escape(separator)}'
         message = re.sub(pattern, f'{field}={redaction}{separator}', message)
     return message
+
+
+class RedactingFormatter(logging.Formatter):
+    """ Redacting Formatter class
+        """
+
+    REDACTION = "***"
+    FORMAT = "[HOLBERTON] %(name)s %(levelname)s %(asctime)-15s: %(message)s"
+    SEPARATOR = ";"
+
+    def __init__(self):
+        super(RedactingFormatter, self).__init__(self.FORMAT)
+
+    def format(self, record: logging.LogRecord) -> str:
+        """Format the log message"""
+        message = super().format(record)
+        for field in self.fields:
+            message = re.sub(f'{field}=.*?{self.SEPARATOR}', f'{field}={self.REDACTION}{self.SEPARATOR}', message)
+        return message
