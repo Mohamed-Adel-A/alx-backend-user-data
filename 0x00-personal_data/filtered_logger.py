@@ -4,9 +4,10 @@ Module for filtering sensitive data in log messages.
 """
 
 import re
+import typing
 
 
-def filter_datum(fields: list, redaction: str, message: str, separator: str) -> str:
+def filter_datum(fields: typing.List[str], redaction: str, message: str, separator: str) -> str:
     """
     Replace occurrences of certain field values in a log message.
     """
