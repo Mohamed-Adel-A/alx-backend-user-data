@@ -23,15 +23,17 @@ class Auth:
         return False
 
     def authorization_header(self, request=None) -> str:
-        """ Method to get the Authorization header from the request.
+        """ Method to retrieve and validate the Authorization header from the request.
 
         Args:
-            request (flask.Request): The Flask request object.
+            request: The Flask request object.
 
         Returns:
-            str: The Authorization header value.
+            str: The value of the Authorization header if present, otherwise None.
         """
-        return None
+        if request is None:
+            return None
+        return request.headers.get('Authorization')
 
     def current_user(self, request=None) -> TypeVar('User'):
         """ Method to get the current user based on the request.
