@@ -36,5 +36,6 @@ class RedactingFormatter(logging.Formatter):
         message = super().format(record)
         for field in self.fields:
             message = re.sub(f'{field}=.*?{self.SEPARATOR}',
-                             f'{field}={self.REDACTION}{self.SEPARATOR}', message)
+                             f'{field}={self.REDACTION}{self.SEPARATOR}',
+                             message)
         return message
