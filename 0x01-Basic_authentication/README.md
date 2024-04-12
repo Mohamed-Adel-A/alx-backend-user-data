@@ -26,11 +26,11 @@ In the industry, you should **not** implement your own Basic authentication syst
 
 **Read or watch**:
 
--   [REST API Authentication Mechanisms](https://intranet.alxswe.com/rltoken/ssg5umgsMk5jKM8WRHk2Ug "REST API Authentication Mechanisms")
--   [Base64 in Python](https://intranet.alxswe.com/rltoken/RpaPRyKx1rdHgRSUyuPfeg "Base64 in Python")
--   [HTTP header Authorization](https://intranet.alxswe.com/rltoken/WlARq8tQPUGQq5VphLKM4w "HTTP header Authorization")
--   [Flask](https://intranet.alxswe.com/rltoken/HG5WXgSja5kMa29fbMd9Aw "Flask")
--   [Base64 - concept](https://intranet.alxswe.com/rltoken/br6Rp4iMaOce6EAC-JQnOw "Base64 - concept")
+-   [REST API Authentication Mechanisms](https://www.youtube.com/watch?v=501dpx2IjGY "REST API Authentication Mechanisms")
+-   [Base64 in Python](https://docs.python.org/3.7/library/base64.html "Base64 in Python")
+-   [HTTP header Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization "HTTP header Authorization")
+-   [Flask](https://palletsprojects.com/p/flask/ "Flask")
+-   [Base64 - concept](https://en.wikipedia.org/wiki/Base64 "Base64 - concept")
 
 ## Learning Objectives
 
@@ -68,7 +68,7 @@ mandatory
 
 Score: 65.0% (Checks completed: 100.0%)
 
-Download and start your project from this [archive.zip](https://intranet.alxswe.com/rltoken/2o4gAozNufil_KjoxKI5bA "archive.zip")
+Download and start your project from this [archive.zip](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2020/11/ec2f874b061bd3a2915949f081f4f5f055104f20.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240412%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240412T075859Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=1331fe5b2708415eda2cc7bf92b9a81780db651ea8b5a4ca7758de9e1b99becb "archive.zip")
 
 In this archive, you will find a simple API with one model: `User`. Storage of these users is done via a serialization/deserialization in files.
 
@@ -116,44 +116,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "0. Simple-basic-API"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Get a sandbox QA Review
-
-×
-
-#### 0\. Simple-basic-API
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 1\. Error handler: Unauthorized
 
@@ -173,7 +136,7 @@ Edit `api/v1/app.py`:
 For testing this new error handler, add a new endpoint in `api/v1/views/index.py`:
 
 -   Route: `GET /api/v1/unauthorized`
--   This endpoint must raise a 401 error by using `abort` - [Custom Error Pages](https://intranet.alxswe.com/rltoken/RH0gY_XQuSB75Q-JbI-fdg "Custom Error Pages")
+-   This endpoint must raise a 401 error by using `abort` - [Custom Error Pages](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/ "Custom Error Pages")
 
 By calling `abort(401)`, the error handler for 401 will be executed.
 
@@ -224,44 +187,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "1. Error handler: Unauthorized"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 1\. Error handler: Unauthorized
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 2\. Error handler: Forbidden
 
@@ -332,44 +258,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "2. Error handler: Forbidden"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 2\. Error handler: Forbidden
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 3\. Auth class
 
@@ -420,44 +309,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "3. Auth class"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 3\. Auth class
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 4\. Define which routes don't need authentication
 
@@ -510,44 +362,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "4. Define which routes don't need authentication"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 4\. Define which routes don't need authentication
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 5\. Request validation!
 
@@ -571,7 +386,7 @@ Update the file `api/v1/app.py`:
         -   import `Auth` from `api.v1.auth.auth`
         -   create an instance of `Auth` and assign it to the variable `auth`
 
-Now the biggest piece is the filtering of each request. For that you will use the Flask method [before\_request](https://intranet.alxswe.com/rltoken/kzBrJT9aaokbD6aWYyQzXg "before_request")
+Now the biggest piece is the filtering of each request. For that you will use the Flask method [before\_request](https://flask.palletsprojects.com/en/1.1.x/api/#flask.Blueprint.before_request "before_request")
 
 -   Add a method in `api/v1/app.py` to handler `before_request`
     -   if `auth` is `None`, do nothing
@@ -620,44 +435,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "5. Request validation!"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 5\. Request validation!
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 6\. Basic auth
 
@@ -715,44 +493,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "6. Basic auth"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 6\. Basic auth
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 7\. Basic - Base64 part
 
@@ -805,44 +546,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "7. Basic - Base64 part"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 7\. Basic - Base64 part
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 8\. Basic - Base64 decode
 
@@ -892,44 +596,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "8. Basic - Base64 decode"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 8\. Basic - Base64 decode
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 9\. Basic - User credentials
 
@@ -979,44 +646,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "9. Basic - User credentials"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 9\. Basic - User credentials
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 10\. Basic - User object
 
@@ -1090,44 +720,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "10. Basic - User object"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 10\. Basic - User object
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 11\. Basic - Overload current\_user - and BOOM!
 
@@ -1225,44 +818,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "11. Basic - Overload current\_user - and BOOM!"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 11\. Basic - Overload current\_user - and BOOM!
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 12\. Basic - Allow password with ":"
 
@@ -1359,44 +915,7 @@ bob@dylan:~$
 
 Done?! Check your code
 
-×
-
-#### Correction of "12. Basic - Allow password with ":""
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox QA Review
-
-×
-
-#### 12\. Basic - Allow password with ":"
-
-##### Commit used:
-
--   **User:** \---
--   **URL:** Click here
--   **ID:** `---`
--   **Author:** \---
--   **Subject:** _\---_
--   **Date:** \---
+---
 
 ### 13\. Require auth with stars
 
@@ -1419,29 +938,3 @@ Example for `excluded_paths = ["/api/v1/stat*"]`:
 -   File: `api/v1/auth/auth.py`
 
 Done?! Check your code
-
-×
-
-#### Correction of "13. Require auth with stars"
-
-Start a new test Close
-
-Requirement success
-
-Requirement fail
-
-Code success
-
-Code fail
-
-Efficiency success
-
-Efficiency fail
-
-Text answer success
-
-Text answer fail
-
-Skipped - Previous check failed
-
-Ask for a new correction : in progress... : an error occurred Get a sandbox
