@@ -6,6 +6,9 @@ Module for filtering sensitive data in log messages.
 import re
 import typing
 import logging
+import os
+
+PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 
 
 def filter_datum(fields: typing.List[str], redaction: str,
@@ -17,6 +20,23 @@ def filter_datum(fields: typing.List[str], redaction: str,
         pattern = f'{re.escape(field)}=.+?{re.escape(separator)}'
         message = re.sub(pattern, f'{field}={redaction}{separator}', message)
     return message
+
+
+def get_logger() -> logging.Logger:
+    """
+    Return a Logger object.
+    """
+    logger = logging.getLogger("user_data")
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
+
+    formatter = RedactingFormatter(PII_FIELDS)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    logger.addHandler(stream_handler)
+
+    return logger
 
 
 class RedactingFormatter(logging.Formatter):
