@@ -17,19 +17,18 @@ class Auth:
                                or (len(excluded_paths) == 0))):
             return True
 
-        new_excluded = list()
+        if path[-1] != '/':
+            path += '/'
+
         for excluded_path in excluded_paths:
             if excluded_path.endswith('*'):
                 prefix = excluded_path[:-1]
-                new_excluded.append(prefix)
-            else:
-                new_excluded.append(excluded_path)
+                if path.startswith(prefix):
+                    return False
+            elif path == excluded_path:
+                return False
 
-        if path[-1] != '/':
-            path += '/'
-        if path not in new_excluded:
-            return True
-        return False
+        return True
 
     def authorization_header(self, request=None) -> str:
         """
