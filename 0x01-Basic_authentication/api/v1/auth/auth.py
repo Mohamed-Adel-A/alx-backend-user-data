@@ -23,13 +23,16 @@ class Auth:
         return False
 
     def authorization_header(self, request=None) -> str:
-        """ Method to retrieve and validate the Authorization header from the request.
+        """
+        Method to retrieve and validate
+        the Authorization header from the request.
 
         Args:
             request: The Flask request object.
 
         Returns:
-            str: The value of the Authorization header if present, otherwise None.
+            str: The value of the Authorization
+            header if present, otherwise None.
         """
         if request is None:
             return None
