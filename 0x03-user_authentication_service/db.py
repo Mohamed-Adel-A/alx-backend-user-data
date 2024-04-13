@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+db module
+"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
