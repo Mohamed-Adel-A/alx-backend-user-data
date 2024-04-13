@@ -94,7 +94,9 @@ class Auth:
         self._db.update_user(user_id, session_id=None)
 
     def get_reset_password_token(self, email):
-        """Generate reset password token useing email
+        """
+        Generate reset password token useing email
+        
         """
         try:
             user = self._db.find_user_by(email=email)
