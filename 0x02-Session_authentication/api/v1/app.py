@@ -9,6 +9,7 @@ from flask_cors import (CORS, cross_origin)
 import os
 from api.v1.auth.auth import Auth
 from api.v1.auth.basic_auth import BasicAuth
+from models.user import User
 
 
 app = Flask(__name__)
@@ -33,14 +34,17 @@ if getenv("AUTH_TYPE") == "basic_auth":
 @app.before_request
 def before_request():
     """Handler for handling authentication before each request."""
-    if auth is None:
-        return
+
+    auth = BasicAuth()
+    request.current_user = auth.current_user(request)
 
     excluded_paths = [
         '/api/v1/status/',
         '/api/v1/unauthorized/',
         '/api/v1/forbidden/',
         ]
+
+
     if auth.require_auth(request.path, excluded_paths):
         # Check Authorization header
         if auth.authorization_header(request) is None:
