@@ -25,9 +25,9 @@ class SessionDBAuth(SessionExpAuth):
             return None
         user_id = super().user_id_for_session_id(session_id)
         if user_id:
-            session = UserSession.get(session_id)
-            if session:
-                return session.user_id
+            sessions = UserSession.search({'session_id': session_id})
+            if sessions:
+                return sessions[0].user_id
         return None
 
     def destroy_session(self, request=None):
