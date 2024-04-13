@@ -14,7 +14,7 @@ class SessionDBAuth(SessionExpAuth):
         """Create a new session and store it in the database."""
         session_id = super().create_session(user_id)
         if session_id:
-            new_session = UserSession(id=session_id, user_id=user_id)
+            new_session = UserSession(session_id=session_id, user_id=user_id)
             new_session.save()
             return session_id
         return None
