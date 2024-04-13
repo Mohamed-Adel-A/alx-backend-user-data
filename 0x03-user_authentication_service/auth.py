@@ -123,6 +123,8 @@ class Auth:
             raise ValueError("Invalid reset token")
 
         hashed_password = _hash_password(password)
-        user.hashed_password = hashed_password
-        user.reset_token = None
-        self._db.commit()
+        self._db.update_user(
+            user.id,
+            hashed_password=hashed_password,
+            reset_token=None,
+        )
