@@ -2,7 +2,7 @@
 """
 db module
 """
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, tuple_
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import InvalidRequestError
 from sqlalchemy.orm.exc import NoResultFound
@@ -47,8 +47,17 @@ class DB:
     def find_user_by(self, **kwargs) -> User:
         """Find a user by given criteria
         """
+        fields, values = [], []
+        for key, value in kwargs.items():
+            if hasattr(User, key):
+                fields.append(getattr(User, key))
+                values.append(value)
+            else:
+                raise InvalidRequestError()
         try:
-            user = self._session.query(User).filter_by(**kwargs).first()
+            user = self._session.query(User).filter_by(
+                tuple_(*fields).in_([tuple(values)])
+                ).first()
             if user is None:
                 raise NoResultFound
             return user
