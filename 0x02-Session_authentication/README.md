@@ -614,7 +614,7 @@ In the file `api/v1/views/session_auth.py`, create a route `POST /auth_session/l
         -   You must use `from api.v1.app import auth` - **WARNING: please import it only where you need it** - not on top of the file (can generate circular import - and break first tasks of this project)
         -   You must use `auth.create_session(..)` for creating a Session ID
         -   Return the dictionary representation of the `User` - you must use `to_json()` method from User
-        -   You must set the cookie to the response - you must use the value of the environment variable `SESSION_NAME` as cookie name - [tip](https://intranet.alxswe.com/rltoken/3WDlzYbVvdJJAf70IjWK6g "tip")
+        -   You must set the cookie to the response - you must use the value of the environment variable `SESSION_NAME` as cookie name - [tip](https://stackoverflow.com/questions/26587485/can-a-cookie-be-set-when-using-jsonify "tip")
 
 In the file `api/v1/views/__init__.py`, you must add this new view at the end of the file.
 
