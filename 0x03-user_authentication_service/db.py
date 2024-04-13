@@ -54,12 +54,11 @@ class DB:
                 values.append(value)
             else:
                 raise InvalidRequestError()
-        try:
-            user = self._session.query(User).filter_by(
-                tuple_(*fields).in_([tuple(values)])
-                ).first()
-            if user is None:
-                raise NoResultFound
-            return user
-        except InvalidRequestError:
-            raise InvalidRequestError("Invalid query arguments")
+
+        user = self._session.query(User).filter_by(
+            tuple_(*fields).in_([tuple(values)])
+            ).first()
+
+        if user is None:
+            raise NoResultFound
+        return user
