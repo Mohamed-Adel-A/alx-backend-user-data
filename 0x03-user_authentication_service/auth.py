@@ -95,8 +95,16 @@ class Auth:
 
     def get_reset_password_token(self, email):
         """
-        Generate reset password token useing email
-        
+        Generates a reset password token for the specified email.
+
+        Args:
+            email (str): The email address of the user for whom the reset password token is generated.
+
+        Returns:
+            str: The reset password token generated for the user.
+
+        Raises:
+            ValueError: If the specified email does not exist in the database.
         """
         try:
             user = self._db.find_user_by(email=email)
