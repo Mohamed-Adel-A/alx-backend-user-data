@@ -23,21 +23,12 @@ class SessionDBAuth(SessionExpAuth):
         """Retrieve user ID for a session ID from the database."""
         if session_id is None:
             return None
-
-        # Retrieve the UserSession from the database using the session_id
-        session = UserSession.get(session_id)
-
-        # If session is found and session is not expired
-        if session:
-            # Check if the session is expired
-            session_created_at = session.created_at
-            session_duration = self.session_duration
-            current_time = datetime.now()
-            if (current_time - session_created_at).total_seconds() <= session_duration:
+        user_id = super().user_id_for_session_id(session_id)
+        if user_id:
+            session = UserSession.get(session_id)
+            if session:
                 return session.user_id
-
         return None
-
 
     def destroy_session(self, request=None):
         """Destroy a session by removing it from the database."""

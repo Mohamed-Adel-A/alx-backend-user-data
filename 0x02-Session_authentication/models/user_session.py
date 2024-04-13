@@ -4,6 +4,7 @@ user session module
 """
 from models.base import Base
 
+
 class UserSession(Base):
     """UserSession model for storing session IDs in the database."""
 
