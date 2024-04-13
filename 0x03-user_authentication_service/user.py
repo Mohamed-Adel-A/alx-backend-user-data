@@ -19,7 +19,3 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     session_id = Column(String)
     reset_token = Column(String)
-
-
-# Add this line to create the table in your database
-Base.metadata.create_all(engine)
