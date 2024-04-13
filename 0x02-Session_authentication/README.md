@@ -61,10 +61,6 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ### 0\. Et moi et moi et moi!
 
-mandatory
-
-Score: 0.0% (Checks completed: 0.0%)
-
 Copy all your work of the **0x06. Basic authentication** project in this new folder.
 
 In this version, you implemented a **Basic authentication** for giving you access to all User endpoints:
