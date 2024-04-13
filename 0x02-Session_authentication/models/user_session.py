@@ -2,13 +2,14 @@
 """
 user session module
 """
-from sqlalchemy import Column, String, ForeignKey
 from models.base import Base
 
 class UserSession(Base):
     """UserSession model for storing session IDs in the database."""
 
-    __tablename__ = 'user_sessions'
-
-    id = Column(String(60), primary_key=True)
-    user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
+    def __init__(self, *args: list, **kwargs: dict):
+        """Initializes a User session instance.
+        """
+        super().__init__(*args, **kwargs)
+        self.user_id = kwargs.get('user_id')
+        self.session_id = kwargs.get('session_id')
