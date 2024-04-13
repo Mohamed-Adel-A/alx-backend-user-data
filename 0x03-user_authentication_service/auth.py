@@ -97,11 +97,15 @@ class Auth:
         """
         Generate reset password token useing email
         """
-        user = self._db.find_user_by(email=email)
+        try:
+            user = self._db.find_user_by(email=email)
+        except NoResultFound:
+            raise ValueError(f"User with email {email} not found")
+
         if not user:
             raise ValueError(f"User with email {email} not found")
 
-        reset_token = str(uuid.uuid4())
+        reset_token = _generate_uuid()
         self._db.update_user(user.id, reset_token=reset_token)
-        
+
         return reset_token
