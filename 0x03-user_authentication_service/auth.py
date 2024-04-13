@@ -93,3 +93,4 @@ class Auth:
         if user:
             user.session_id = None
             self._db.commit()
+        return None
