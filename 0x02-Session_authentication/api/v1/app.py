@@ -35,9 +35,6 @@ if getenv("AUTH_TYPE") == "basic_auth":
 def before_request():
     """Handler for handling authentication before each request."""
 
-    auth = BasicAuth()
-    request.current_user = auth.current_user(request)
-
     excluded_paths = [
         '/api/v1/status/',
         '/api/v1/unauthorized/',
@@ -46,6 +43,7 @@ def before_request():
 
 
     if auth.require_auth(request.path, excluded_paths):
+        request.current_user = auth.current_user(request)
         # Check Authorization header
         if auth.authorization_header(request) is None:
             abort(401)
